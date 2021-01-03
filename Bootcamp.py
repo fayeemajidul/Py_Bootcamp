@@ -94,3 +94,24 @@ def applicant_selector(gpa,ps_score,ec_count):
     return("This applicant should be given an in-person interview.")
   else:
     return("This applicant should be rejected.")
+
+def grade_converter(gpa):
+  if gpa >= 4.0:
+    return ("A")
+  elif gpa >= 3.0:
+    return ("B")
+  elif gpa >= 2.0:
+    return ("C")
+  elif gpa >= 1.0:
+    return ("D")
+  else:
+    return ("F")
+#else statements don't need conditions to be met.
+#Review Conditionals.
+def applicant_selector(gpa,ps_score,ec_count):
+  if (gpa >= 3.0) and (ps_score >= 90) and (ec_count >= 3):
+    return("This applicant should be accepted.")
+  elif(gpa >= 3.0) and (ps_score >= 90) and not (ec_count >= 3):
+    return("This applicant should be given an in-person interview.")
+  else:
+    return("This applicant should be rejected.")
